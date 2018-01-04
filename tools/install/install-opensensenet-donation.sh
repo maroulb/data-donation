@@ -1,7 +1,8 @@
 #! /bin/sh
 
 INSTALL_DIR=/opt/opensensenet
-GIT_URL="https://github.com/opensense-network/data-donation.git"
+GIT_URL="https://github.com/maroulb/data-donation/tree/envirophat_agent"
+#GIT_URL="https://github.com/opensense-network/data-donation.git"
 LOG_FILE=$INSTALL_DIR/log/opensensenet-donation.log
 CONFIG_FILE=$INSTALL_DIR/config/opensensenet-donation.config.json
 USER=opensense
