@@ -5,7 +5,7 @@ This file is part of **opensense** project https://github.com/opensense-network/
     :platform: Unix, Windows, MacOS X
     :sinopsis: opensense
 
-.. moduleauthor:: Frank Pallas <frank.pallas@tu-berlin.de>
+.. moduleauthor:: Max-R. Ulbricht (@maroulb)
 
 License : GPL(v3)
 
@@ -31,7 +31,7 @@ from envirophat import light, weather
 
 class EnvirophatAgent(AbstractAgent):
     """
-    A opensense donation agent for sending environmental data meassured by an "Enviro_pHat" sensing board from pimoroni.
+    A opensense donation agent for sending environmental data measured by an "Enviro_pHat" sensing board from pimoroni.
     """
 
     def __init__(self, configDir, osnInstance):
