@@ -45,17 +45,17 @@ class EnvirophatAgent(AbstractAgent):
     def run(self):
         self.isRunning = True
         while True:
-            self.sendValue(temp, ((weather.temperature()) - 4))
-            self.sendValue(pressure, weather.pressure())
-            self.sendValue(lumi, light.light())
+            self.sendValue('temp', ((weather.temperature()) - 6))
+            self.sendValue('pressure', weather.pressure())
+            self.sendValue('lumi', light.light())
             time.sleep(60)
 
     def discoverSensors(self):
         prefId = self.getPreferenceInfo()
         prefURL = 'http://consentcentral.org/' + str(prefId)
-        self.addDefaultSensor(temp, "temperature", "celsius", {"usagePreferenceLink": str(prefURL)})
-        self.addDefaultSensor(lumi, "luminance", "lux", {"usagePreferenceLink": str(prefURL)})
-        self.addDefaultSensor(pressure, "air_pressure", "hPa", {"usagePreferenceLink": str(prefURL)})
+        self.addDefaultSensor('temp', "temperature", "celsius", {"usagePreferenceLink": str(prefURL)})
+        self.addDefaultSensor('lumi', "luminance", "lux", {"usagePreferenceLink": str(prefURL)})
+        self.addDefaultSensor('pressure', "air_pressure", "hPa", {"usagePreferenceLink": str(prefURL)})
         self.serializeConfig()
 
     def stop(self):
